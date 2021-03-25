@@ -1,5 +1,5 @@
 from os.path import join as os_path_join
-from pyrogram import Client, filters, CallbackQueryHandler
+from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler 
 from bot import CONFIG, COMMAND, LOCAL, LOGGER, STATUS
 from bot.handlers import *
