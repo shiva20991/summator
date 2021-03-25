@@ -17,7 +17,7 @@ async def set(client : Client, message: Message):
     await thumbnail_video.set(thumbnail_path)
     await reply.edit_text(LOCAL.THUMBNAIL_APPLIED)
 
-@Client.on_message(Filters.command(COMMAND.RESET_THUMBNAIL))
+@Client.on_message(filters.command(COMMAND.RESET_THUMBNAIL))
 async def reset(client : Client, message: Message):
     reply = await message.reply_text(LOCAL.THUMBNAIL_DELETING)
     await thumbnail_video.reset(thumbnail_path)
