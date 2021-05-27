@@ -9,6 +9,7 @@ LOGGER = logging.getLogger(__name__)
 # create /cancel handler
 
 from pyrogram import Client, filters, CallbackQuery
+from pyrogram.types import Message 
 from bot import LOCAL, CONFIG, STATUS, COMMAND
 from typing import Union
 
