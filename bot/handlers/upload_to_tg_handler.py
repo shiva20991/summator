@@ -11,6 +11,7 @@ LOGGER = logging.getLogger(__name__)
 from os import path as os_path, listdir as os_lisdir, remove as os_remove, rmdir as os_rmdir
 from time import time
 from math import floor
+from pyrogram.types import Message 
 from pyrogram import Client, 
 from bot import LOCAL, CONFIG, STATUS
 from bot.plugins import formater, split, thumbnail_video, ffprobe
