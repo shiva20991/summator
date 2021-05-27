@@ -10,6 +10,7 @@ LOGGER = logging.getLogger(__name__)
 
 from re import match as re_match
 from asyncio import sleep as asyncio_sleep
+from pyrogram.types import Message 
 from os.path import join as os_path_join
 from math import floor
 from pyrogram import Client, filters, InlineKeyboardMarkup, InlineKeyboardButton
