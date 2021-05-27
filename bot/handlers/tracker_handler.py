@@ -11,6 +11,7 @@ LOGGER = logging.getLogger(__name__)
 
 from pyrogram import Client, filters
 from bot import LOCAL, STATUS, CONFIG, COMMAND
+from pyrogram.types import Message 
 
 @Client.on_message(filters.command(COMMAND.SET_TRACKER))
 async def set(client : Client, message: Message):
