@@ -11,6 +11,7 @@ LOGGER = logging.getLogger(__name__)
 from os.path import join as os_path_join
 from pyrogram import Client, filters
 from aria2p import Download
+from pyrogram.types import Message 
 from bot import LOCAL, STATUS, CONFIG, COMMAND
 from bot.plugins import aria2
 
