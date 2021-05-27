@@ -1,6 +1,7 @@
 from pyrogram import Client
 from bot import LOCAL, CONFIG, STATUS
 from bot.handlers import help_message_handler
+from pyrogram.types import Message 
 
 async def func(client : Client, message: Message):
     try:
