@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from bot import COMMAND
+from pyrogram.types import Message 
 from bot.handlers import leech_handler
 
 @Client.on_message(filters.private & ~filters.regex(r'^/'))
