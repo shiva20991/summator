@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from bot import COMMAND, LOCAL
+from pyrogram.types import Message 
 
 @Client.on_message(filters.command(COMMAND.HELP))
 async def func(client : Client):
