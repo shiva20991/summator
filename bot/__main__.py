@@ -16,31 +16,6 @@ app = Client(
 )
 app.set_parse_mode("html")
 
-# register /start handler
-app.add_handler(
-    MessageHandler(
-        start_message_handler.func,
-        filters=Filters.command(COMMAND.START)
-    )
-)
-
-if CONFIG.BOT_PASSWORD:
-    # register /pass handler
-    app.add_handler(
-        MessageHandler(
-            password_handler.func,
-            filters = Filters.command(COMMAND.PASSWORD)
-        )
-    )
-
-    # take action on unauthorized chat room
-    app.add_handler(
-        MessageHandler(
-            wrong_room_handler.func,
-            filters = lambda msg: not msg.chat.id in STATUS.CHAT_ID
-        )
-    )
-
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     loop.create_task(app.start())
