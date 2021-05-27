@@ -12,7 +12,7 @@ from pyrogram import Client, filters, CallbackQuery
 from bot import LOCAL, CONFIG, STATUS, COMMAND
 from typing import Union
 
-@Client.on_message(Filters.command(COMMAND.CANCEL_LEECH))
+@Client.on_message(filters.command(COMMAND.CANCEL_LEECH))
 async def func(client : Client, data : Union[Message, CallbackQuery]):
     gid = ""
     update_fn = None
@@ -56,6 +56,6 @@ async def func(client : Client, data : Union[Message, CallbackQuery]):
             except:
                 pass
                 
-@Client.on_callback_query(Filters.create(lambda _, query: query.data.startswith(COMMAND.CANCEL_LEECH)))
+@Client.on_callback_query(filters.create(lambda _, query: query.data.startswith(COMMAND.CANCEL_LEECH)))
 async def func2(*args, **kwargs):
     return await func(*args, **kwargs)
